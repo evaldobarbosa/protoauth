@@ -1,0 +1,21 @@
+{
+    "name": "evaldobarbosa/protoauth",
+    "description": "A simple authentication for local environments",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "ProtoAuth\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Evaldo Barbosa",
+            "email": "evaldo.barbosa@nhecotech.com"
+        }
+    ],
+    "require": {
+        "php-open-source-saver/jwt-auth": "^1.4",
+        "illuminate/http": "^9.23.0"
+    }
+}
