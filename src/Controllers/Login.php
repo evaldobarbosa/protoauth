@@ -21,10 +21,13 @@ class Login extends Controller
             return response()->json(['error' => 'Unauthorized'], 401);
         }
 
-        $user = \App\Models\User::where('email', $credentials['email'])->first();
+        // $user = \App\Models\User::where('email', $credentials['email'])->first();
+        
+        $userClass = \Config::get('auth.providers.users.model');
+        $user = $userClass::where('email', $credentials['email'])->first();
 
         if (is_null($user)) {   
-            $user = \App\Models\User::create([
+            $user = $userClass::create([
                 'guid' => str()->uuid(),
                 'name' => $this->getNameFromEmail($credentials['email']),
                 'email' => $credentials['email'],
