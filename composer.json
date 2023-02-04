@@ -15,7 +15,7 @@
         }
     ],
     "require": {
-        "php-open-source-saver/jwt-auth": "^1.4",
+        "php-open-source-saver/jwt-auth": "^2.0",
         "illuminate/http": "^9.23.0"
     }
 }
